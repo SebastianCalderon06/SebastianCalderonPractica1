@@ -1,10 +1,10 @@
 :root {
   --color-fondo: #ffffbf;
-  --color-texto: #1c1917;
-  --color-acento: #ffb15a;     
+  --color-texto: #2C1E11;
+  --color-acento: #1B365D;     
   --color-superficie: #ffffbf;
-  --color-borde: #ffb15a;
-  --color-foco: #ffb15a;
+  --color-borde: #1B365D;
+  --color-foco: #1B365D;
   --color-valido: #166534;
   --color-invalido: #9f1239;
 }
@@ -74,7 +74,7 @@ body {
 header {
   grid-area: header;
   padding: 1rem;
-  background-color: var(--color-superficie);
+  background-color: #e7c270;
   border-bottom: 1px solid var(--color-borde);
   text-align: center;
   justify-content: center;
@@ -88,7 +88,7 @@ main {
 aside {
   grid-area: aside;
   padding: 1.5rem 1rem;
-  background-color: var(--color-superficie);
+  background-color: #e5aa70;
   border-top: 1px solid var(--color-borde);
 }
 
