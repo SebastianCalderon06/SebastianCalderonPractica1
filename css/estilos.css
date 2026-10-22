@@ -136,3 +136,87 @@ nav a:hover {
     border-left: 1px solid var(--color-borde);
   }
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--color-superficie);
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid var(--color-borde);
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--color-fondo);
+}
+
+fieldset {
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: var(--color-superficie);
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
+.grupo-campo {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 4px;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+}
+
+button[type="submit"] {
+  background-color: var(--color-acento);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  min-height: 44px;
+}
+
+/* Validación nativa y estados de formulario (:valid, :invalid y :has) */
+input:user-invalid, select:user-invalid, textarea:user-invalid {
+  border-color: var(--color-invalido);
+}
+
+input:user-valid, select:user-valid, textarea:user-valid {
+  border-color: var(--color-valido);
+}
+
+.grupo-campo:has(input:user-invalid) {
+  border-left: 4px solid var(--color-invalido);
+}
+
+.grupo-campo:has(input:user-valid) {
+  border-left: 4px solid var(--color-valido);
+}
