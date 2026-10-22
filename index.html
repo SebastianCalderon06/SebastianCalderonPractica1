@@ -56,5 +56,48 @@
       </table>
     </section>
 
+    <section id="registro" aria-labelledby="titulo-registro">
+      <h2 id="titulo-registro">Formulario de Inscripción</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Datos Personales del Deportista</legend>
+
+          <div class="grupo-campo">
+            <label for="nombre">Nombre completo:</label>
+            <input id="nombre" name="nombre" type="text" required minlength="3" autocomplete="name">
+          </div>
+
+          <div class="grupo-campo">
+            <label for="correo">Correo electrónico:</label>
+            <input id="correo" name="correo" type="email" required autocomplete="email">
+          </div>
+
+          <!-- CAMPO ESPECIAL: Teléfono Ecuatoriano Validado -->
+          <div class="grupo-campo">
+            <label for="telefono">Teléfono celular:</label>
+            <input id="telefono" name="telefono" type="tel" inputmode="numeric" required pattern="09[0-9]{8}" autocomplete="tel" aria-describedby="ayuda-telefono">
+            <p id="ayuda-telefono">Ingrese 10 dígitos iniciando con 09 (ejemplo: 0912345678).</p>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="disciplina">Disciplina deportiva:</label>
+            <select id="disciplina" name="disciplina" required>
+              <option value="">Seleccione una opción</option>
+              <option value="futbol">Fútbol</option>
+              <option value="baloncesto">Baloncesto</option>
+              <option value="natacion">Natación</option>
+            </select>
+          </div>
+
+          <div class="grupo-campo">
+            <label for="observaciones">Observaciones adicionales:</label>
+            <textarea id="observaciones" name="observaciones" rows="3"></textarea>
+          </div>
+
+          <button type="submit">Enviar Inscripción</button>
+        </fieldset>
+      </form>
+    </section>
+
 </body>
 </html>
