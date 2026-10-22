@@ -1,0 +1,59 @@
+:root {
+  --color-fondo: #fdfcf9;
+  --color-texto: #1b1f27;
+  --color-acento: #0b5fff;
+  --color-superficie: #ffffff;
+  --color-borde: #dad8d0;
+  --color-foco: #0b5fff;
+  --color-valido: #006e1c;
+  --color-invalido: #b00020;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #12161c;
+    --color-texto: #e9e7e1;
+    --color-acento: #8db8ff;
+    --color-superficie: #1e232d;
+    --color-borde: #3a3f4a;
+    --color-foco: #8db8ff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+a[href="#contenido"] {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+a[href="#contenido"]:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+  background-color: var(--color-acento);
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-foco);
+  outline-offset: 2px;
+}
