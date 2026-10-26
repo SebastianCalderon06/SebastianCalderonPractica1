@@ -3,22 +3,31 @@
   --color-texto: #2C1E11;
   --color-acento: #1B365D;     
   --color-superficie: #ffffbf;
+  --color-header-bg: #e7c270;
+  --color-header-texto: #1B365D;
+  --color-aside-bg: #e5aa70;
   --color-borde: #1B365D;
   --color-foco: #1B365D;
   --color-valido: #166534;
   --color-invalido: #9f1239;
+  --color-texto-boton: #ffffff;
 }
 
+/* Solución Hallazgos 1 y 2: Contraste de texto en modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --color-fondo: #1c1917;
     --color-texto: #f5f5f4;
     --color-acento: #fb7185;   
     --color-superficie: #292524;
+    --color-header-bg: #292524;
+    --color-header-texto: #f5f5f4;
+    --color-aside-bg: #292524;
     --color-borde: #44403c;
     --color-foco: #fb7185;
     --color-valido: #22c55e;
     --color-invalido: #fb7185;
+    --color-texto-boton: #1c1917; /* Texto oscuro sobre botón rosa */
   }
 }
 
@@ -74,10 +83,18 @@ body {
 header {
   grid-area: header;
   padding: 1rem;
-  background-color: #e7c270;
+  background-color: var(--color-header-bg);
   border-bottom: 1px solid var(--color-borde);
-  text-align: center;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header h1 {
+  color: var(--color-header-texto);
+  margin: 0;
 }
 
 main {
@@ -88,7 +105,7 @@ main {
 aside {
   grid-area: aside;
   padding: 1.5rem 1rem;
-  background-color: #e5aa70;
+  background-color: var(--color-aside-bg);
   border-top: 1px solid var(--color-borde);
 }
 
@@ -199,7 +216,7 @@ input, select, textarea {
 
 button[type="submit"] {
   background-color: var(--color-acento);
-  color: #ffffff;
+  color: var(--color-texto-boton); /* Solución Hallazgo 2 y 3 */
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 4px;
@@ -207,7 +224,6 @@ button[type="submit"] {
   cursor: pointer;
   min-height: 44px;
 }
-
 
 input:user-invalid, select:user-invalid, textarea:user-invalid {
   border-color: var(--color-invalido);
